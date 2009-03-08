@@ -1,6 +1,6 @@
 <?php
 /*
-File: pi.md_spammenot.php
+File: pi.md_spam_me_not.php
 ------------------------------------------------------------------------
 Purpose: Encode email addresses to make it harder for spammers to harvest them.
 ========================================================================
@@ -12,16 +12,16 @@ $plugin_info = array(
 						'pi_author'			=> 'Ryan Masuga',
 						'pi_author_url'		=> 'http://www.masugadesign.com/',
 						'pi_description'		=> 'Obfuscates email in a way still works when Javascript is disabled.',
-						'pi_usage'			=> Md_spammenot::usage()
+						'pi_usage'			=> Md_spam_me_not::usage()
 					);
 
-class Md_spammenot {
+class Md_spam_me_not {
 
 var $return_data = "";
 var $hiddenemail = "";
 var $show = "";
 	
-	function md_spammenot()
+	function md_spam_me_not()
 	{
 			global $TMPL;
 			$email = $TMPL->fetch_param('email'); //REQURIED
@@ -75,7 +75,7 @@ ob_start();
 ?>
 Place the following tag in any of your templates:
 
-{exp:md_spammenot}
+{exp:md_spam_me_not}
 
 PARAMETERS: 
 The tag has six parameters:
@@ -87,8 +87,8 @@ The tag has six parameters:
 5. class - [OPTIONAL]
 6. subject - [OPTIONAL]
 
-Example usage (full):  {exp:md_spammenot email="ryan@masugadesign.com" mode="1" title="My Title" class="nocion email" subject="EE Inquiry" text="Email Ryan for more info."}
-Example usage (basic):  {exp:md_spammenot email="ryan@masugadesign.com"}
+Example usage (full):  {exp:md_spam_me_not email="ryan@masugadesign.com" mode="1" title="My Title" class="nocion email" subject="EE Inquiry" text="Email Ryan for more info."}
+Example usage (basic):  {exp:md_spam_me_not email="ryan@masugadesign.com"}
 
 <?php
 $buffer = ob_get_contents();

@@ -17,7 +17,7 @@ h2. Changelog
 
 *1.0.4 (Mar 7, 2009)*
 
-* Chnaged name (and function and class) to MD Spam Me Not
+* Changed name (and function and class) to MD Spam Me Not (md_spam_me_not)
 
 1.0.3 (Sep 15, 2007)
 
