@@ -15,7 +15,11 @@ General EE Plugin Info: http://expressionengine.com/docs/development/plugins.htm
 
 h2. Changelog
 
-*1.0.4 (Mar 7, 2009)*
+*1.0.5 (Jun 25 2009)*
+
+* Added mailto="off" parameter to return just the email address.
+
+1.0.4 (Mar 7, 2009)
 
 * Changed name (and function and class) to MD Spam Me Not (md_spam_me_not)
 
