@@ -6,7 +6,7 @@ h2. Info
 
 Developed by Ryan Masuga, http://masugadesign.com
 
-Docs: "MD Spam Me Not":http://www.masugadesign.com/the-lab/scripts/spam-me-not/ <br />
+Docs: "MD Spam Me Not":http://devot-ee.com/add-ons/md-spam-me-not/ <br />
 General EE Plugin Info: http://expressionengine.com/docs/development/plugins.html
 
 * Original Spam-me-not PHP version by Rolf Offermanns
@@ -15,7 +15,9 @@ General EE Plugin Info: http://expressionengine.com/docs/development/plugins.htm
 
 h2. Changelog
 
-*1.0.5 (Jun 25 2009)*
+*Updated version for EE2 (Apr 02 2011)*
+
+1.0.5 (Jun 25 2009)
 
 * Added mailto="off" parameter to return just the email address.
 
