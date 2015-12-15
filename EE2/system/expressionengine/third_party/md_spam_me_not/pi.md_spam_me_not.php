@@ -20,7 +20,7 @@ class Md_spam_me_not {
   var $return_data = "";
   var $hiddenemail = "";
   var $show = "";
-	
+
 	function md_spam_me_not()
 	{
 			$this->EE =& get_instance();
@@ -32,17 +32,17 @@ class Md_spam_me_not {
 			$subject = $this->EE->TMPL->fetch_param('subject'); //OPTIONAL
 			$class   = $this->EE->TMPL->fetch_param('class'); //OPTIONAL
 			$mailto  = $this->EE->TMPL->fetch_param('mailto'); //OPTIONAL
-			
+
 			if(!$email)
 		  {
 			  return;
 			}
-			
+
 			if ($mode == ""){$mode = "1";}
-			
+
 			$encodedString = "";
 			$originalLength = strlen($email);
-			
+
 			for ( $i = 0; $i < $originalLength; $i++) {
 			if ($mode == 3) $mode = rand(1,2);
 			switch ($mode) {
@@ -56,45 +56,45 @@ class Md_spam_me_not {
 					//return "ERROR: wrong encoding mode.";
 			}
 		}
-		
-		
-		if($mailto != '') 
+
+
+		if($mailto != '')
 		{
 		  $hiddenemail = $encodedString;
 		}
 		else
 		{
   		$show = ($text=="") ? $encodedString : $text;
-		
+
   		$myclass = '';
   		if($class != '') $myclass = " class=\"" . $class . "\"";
-		
+
   		$subject_line = '';
   		if($subject != '') $subject_line = "?subject=$subject";
-				
+
   		$title_attr = '';
   		if($title != '') $title_attr = " title=\"" . $title . "\"";
-		
+
   		$hiddenemail = "<a href=\"mailto:$encodedString$subject_line\" $myclass $title_attr>$show</a>";
 
 		}
 		$this->return_data = $hiddenemail;
-		
+
 	}
-    
+
 	// ----------------------------------------
 	//  Plugin Usage
 	// ----------------------------------------
 
-	function usage()
+	static function usage()
 	{
-		ob_start(); 
+		ob_start();
 		?>
 			Place the following tag in any of your templates:
 
 		{exp:md_spam_me_not email=""}
 
-		PARAMETERS: 
+		PARAMETERS:
 		The tag has seven parameters:
 
 		1. email - The email address to obfuscate. [REQUIRED]
@@ -114,8 +114,8 @@ class Md_spam_me_not {
 
 		<?php
 		$buffer = ob_get_contents();
-	
-		ob_end_clean(); 
+
+		ob_end_clean();
 
 		return $buffer;
 	}
